@@ -6,8 +6,8 @@ Created on Wed Sep 18 11:53:24 2024
 """
 
 from os import getcwd, chdir
-
 import pandas as pd
+
 try:
     path = getcwd()
     from Functions import *
@@ -16,10 +16,12 @@ try:
 except:
     import sys
     path = input ('Please copy and paste here the downloaded folder location:\n')
-    chdir(path)
-    from Functions import *
-    data = pd.read_csv(path+'\Epsilon_values.txt', sep="\t")
 
+    chdir(path+r'\Code')
+    from Functions import *
+    chdir(path)
+    data = pd.read_csv(path+r'\Data\Epsilon_values.txt', sep="\t")
+    
 # display DataFrame
 print(data)
 
