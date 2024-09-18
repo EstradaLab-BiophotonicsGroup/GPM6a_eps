@@ -15,7 +15,7 @@ try:
 
 except:
     import sys
-    path = input ('Please copy and paste here the downloaded folder location:\n')
+    path = input ('Please copy and paste here the downloaded "GPM6a_eps-main" folder location. \n Usually: C:\ ... \Downloads\GPM6a_eps-main \n')
 
     chdir(path+r'\Code')
     from Functions import *
